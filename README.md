@@ -1,24 +1,32 @@
-# Flight Price Prediction & Exploratory Data Analysis (EDA)
+# Flight Price — Data Cleaning & KPI Analysis
 
-A comprehensive data analysis project executed in Google Colab to clean, preprocess, and analyze a commercial flight price dataset. The goal of this project is to understand pricing dynamics and prepare features for predictive modeling.
+An end-to-end data cleaning and analysis project on a real-world flight booking dataset —
+built in Google Colab to clean messy date/time fields and answer 7 business KPIs about
+pricing, routes, stops, airlines, and departure timing.
 
 ## 🛠️ Tech Stack & Tools
 - **Environment:** Google Colab
 - **Language:** Python
 - **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
 
-## 🔍 Core Workflow Implemented
-1. **Data Cleaning:** Identified and handled missing values, stripped whitespace, and corrected data types for pricing and dates.
-2. **Feature Engineering:** Extracted useful features from dates (e.g., day of week, month) and structured flight durations into numerical formats.
-3. **Exploratory Data Analysis (EDA):** Visualized price distributions across different airlines, stop configurations, and booking windows.
+## 🔍 Core Workflow
+1. **Data Cleaning:** Handled missing values and one malformed duration entry, reducing
+   10,683 raw listings to 10,681 clean rows.
+2. **Feature Engineering:** Parsed journey date into `DAY`/`MONTH`/`YEAR`, split departure
+   and arrival timestamps into hours/minutes, and converted flight duration into total minutes.
+3. **KPI Analysis:** Answered 7 targeted business questions — pricing by airline, route,
+   and stop count; flight volume by airline and airport; monthly price trends; and average
+   departure timing by airline.
 
-## 📈 Key Insights Discovered
-- **Airline Impact:** Premium carriers show significantly higher price volatility compared to budget airlines.
-- **Stops Correlation:** Flights with 1 or more layovers display a higher average price variance depending on total travel time.
-- **Booking Window:** Ticket prices escalate sharply when booked within 7 days of departure.
+## 📈 Key Insights
+- `Jet Airways Business` averages ~₹58,359 per ticket — a distinct fare class, not a data error.
+- Price rises steadily with each stop: ~₹5,025 (non-stop) → ~₹17,686 (4 stops), a ~3.5x increase.
+- Bangalore → New Delhi is the priciest route (~₹11,918); Chennai → Kolkata the cheapest (~₹4,790).
+- Jet Airways accounts for ~36% of all flights in the dataset — the dominant carrier.
+- Delhi is the busiest source airport, handling ~42% of all departures.
 
 ## 🚀 How to Run the Notebook
-1. Download the `.ipynb` file from this repository.
-2. Upload it to your **Google Drive**.
-3. Open the file using **Google Colab** and run the cells sequentially.
-
+1. Clone this repository (the notebook pulls `data/flight_price.xlsx` from it automatically):
+   git clone https://github.com/mdooo7/DA-Flight-Price-Project
+2. Open `DA_Flight_Price.ipynb` in Google Colab (or upload it to Colab directly).
+3. Run all cells sequentially: **Runtime → Run all**.
