@@ -1,8 +1,8 @@
 # Flight Price — Data Cleaning & KPI Analysis
 
-An end-to-end data cleaning and analysis project on a real-world flight booking dataset —
-built in Google Colab to clean messy date/time fields and answer 7 business KPIs about
-pricing, routes, stops, airlines, and departure timing.
+A data cleaning and analysis project on a real-world flight booking dataset — built in Google
+Colab to clean messy date/time fields and answer 7 business KPIs about pricing, routes,
+stops, airlines, and departure timing.
 
 ## 🛠️ Tech Stack & Tools
 - **Environment:** Google Colab
@@ -27,6 +27,8 @@ pricing, routes, stops, airlines, and departure timing.
 
 ## 🚀 How to Run the Notebook
 1. Clone this repository (the notebook pulls `data/flight_price.xlsx` from it automatically):
+   ```
    git clone https://github.com/mdooo7/DA-Flight-Price-Project
+   ```
 2. Open `DA_Flight_Price.ipynb` in Google Colab (or upload it to Colab directly).
 3. Run all cells sequentially: **Runtime → Run all**.
